@@ -1,0 +1,197 @@
+%-------------------------
+% Resume in LateX
+% Author : Catherine Gilbert
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.cathgilbert.com}{\Large Catherine Gilbert}} & Email: \href{mailto:catherine.gilbert15@gmail.com}{catherine.gilbert15@gmail.com}\\
+  \href{https://www.cathgilbert.com}{www.cathgilbert.com} & Cellulaire: \href{tel:+14183131402}{+1-418-313-1402} \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Expérience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Desjardins}{Lévis, Qc}
+      {Analyste-développeuse, équipe AccèsD}{2021 -- Présent}
+      \resumeItemListStart
+        \resumeItem{Modernisation de la plateforme AccèsD}
+          {Migration de fonctionnalités clés de la plateforme numérique vers une architecture de microservices cloud, nottament le virement entre comptes, réduisant la dette technique.}
+        \resumeItem{Développement de nouvelle fonctionnalités}
+          {Permettre à un individu d'ouvrir un compte courant et devenir membre d'une caisse Desjardins 100\% en ligne. Développement d'une application web et mobile permettant aux enfants de la caisse scolaire de développer de bonne habitudes financières et gérer leur comptes en ligne}
+        \resumeItem{Rehaussement de la sécurité}
+          {Application des standards de sécurité via le chiffrement de données confidentielles et hautement confidentielles afin d'assurer la protection des données des membres-clients.}
+        \resumeItem{Assurer la stabilité des systèmes}
+          {Priorisation de la stabilité et la résilience lors du développement afin de minimiser les interruptions de services aux membres-clients. Revue de code entre pairs pour assurer les standards de qualité et maintenabilité du code}
+        \resumeItem{Tests}
+          {Développement de tests d'intégration et unitaires pour chaque nouvelle fonctionnalité afin d'assurer le bon fonctionnement des sytèmes et prévenir les régressions.}
+        \resumeItem{Technologies}
+          {Java, Spring Boot, TypeScript, JavaScript, HTML, CSS, Angular, Node JS, microservices, PostgreSQL, BD Oracle, git.}
+      \resumeItemListEnd
+
+% --------Multiple Positions Heading------------
+  %  \resumeSubSubheading
+  %   {Software Engineer I}{Oct 2014 -- Sep 2016}
+  %   \resumeItemListStart
+  %      \resumeItem{Apache Beam}
+  %        {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+  %   \resumeItemListEnd
+
+%-------------------------------------------
+
+    \resumeSubheading
+      {N'Ware Technologies}{Saint-Georges, Qc}
+      {Développeuse stagiaire}{Été 2020}
+      \resumeItemListStart
+        \resumeItem{Modernisation}
+          {Réécriture et modernisation d'une application web pour la gestion d'entrepôts.}
+        \resumeItem{Technologies}
+          {C\#, ASP.NET Core, HTML, CSS, JavaScript, MSSQL, SVN}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Bureau en Gros}{Saint-Georges, Qc}
+      {Technicienne informatique}{2017 -- 2021}
+      \resumeItemListStart
+        \resumeItem{Assistance informatique}
+          {Diagnostic et résolution de problèmes informatiques divers}
+        \resumeItem{Conseil et vente}
+          {Assistance et conseil de clients pour l'achat d'ordinateurs, de cellulaires et autre appareils électroniques.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Éducation}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {CÉGEP Beauce-Appalaches}{Saint-Georges, Qc}
+      {DEC en techniques de l'informatique; Cote R: 32.8}{2018 -- 2021}
+      \resumeItemListStart
+        \resumeItem{Programmation objet}
+          {C\#, C++}
+        \resumeItem{Développement web}
+          {HTML, CSS, JavaScript, PHP, Node JS}
+        \resumeItem{Développement mobile}
+          {Android natif, Java}
+        \resumeItem{Bases de données relationnelles}
+          {MSSQL, MySQL}
+        \resumeItem{Développement de jeux}
+          {Unity, C\#}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projets}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Engin de rendu graphique}
+      {Développé en c99 sans librairies et en utilisant les APIs Vulkan et Win32.}
+    \resumeSubItem{\href{https://github.com/Olaren15/ffxiv-easy-translate}{FFXIV Easy Translate}}
+      {Plugin pour le jeu vidéo Final Fantasy XIV écrit en C\# permettant d'obtenir le nom d'items dans une autre langue.}
+    \resumeSubItem{Homelab / Autohébergement de logiciels}
+      {TrueNas, Proxmox, NextCloud, HomeAssistant, FoundryVTT, Serveurs de jeux vidéos (Minecraft, Valheim).}
+    \resumeSubItem{\href{https://www.cathgilbert.com}{Page web personnelle}}
+      {Page web simpliste contenant certaines information sur moi.}
+  \resumeSubHeadingListEnd
+
+% --------Qualités et intérêts------------
+\section{Qualités et intérêts}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Qualités}
+      {Performante; efficace; débrouillarde; résolution de problèmes; facilité à apprendre;}
+    \resumeSubItem{Intérêts}
+      {Logiciels libres; jeux vidéos; culture japonaise;}
+ \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

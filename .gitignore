@@ -1,6 +1,3 @@
-# Archieve
-Archieve/
-
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -15,5 +12,5 @@ Archieve/
 *.cb2
 .*.lb
 
-# github action result
-semicolon_delimited_script
+# Do not include rendered file in VCS
+*.pdf
