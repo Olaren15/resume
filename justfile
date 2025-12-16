@@ -1,5 +1,12 @@
-render:
-    pdflatex resume.tex
+fr:
+    pdflatex fr.tex
 
-watch:
-    watchexec -f resume.tex -- pdflatex resume.tex
+watch-fr:
+    watchexec -f fr.tex -- pdflatex fr.tex
+
+
+en:
+    pdflatex en.tex
+
+watch-en:
+    watchexec -f en.tex -- pdflatex en.tex

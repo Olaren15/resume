@@ -1,0 +1,118 @@
+%-------------------------
+% Resume in LateX
+% Author : Catherine Gilbert
+% License : MIT
+%------------------------
+
+\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
+
+\usepackage[margin=1in, letterpaper]{geometry}
+\setcounter{secnumdepth}{0} % remove section numbering
+\usepackage{titlesec}
+% remove vertical spacing above and below
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
+\titleformat*{\subsubsection}{\large\itshape}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,left=0pt .. \parindent}
+\pagestyle{empty} % remove page number
+\pdfgentounicode=1
+
+
+\begin{document}
+\begin{center}
+	\begin{minipage}{0.5\textwidth}
+		{\Huge\bfseries
+			Catherine Gilbert
+		} \\ \medskip
+	\end{minipage} \hfill
+	\begin{minipage}{0.4\textwidth}
+		\raggedleft
+		Email: recruiting@cathgilbert.com \\
+		Mobile: +1 (418) 313-1402 \\
+		Website: https://olaren.dev \\
+	\end{minipage}
+\end{center}
+
+
+\section{Experience}
+%=================%
+\subsection{Desjardins \hfill Lévis/Montréal, Qc}
+\subsubsection{Analyst-Developer \hfill 2021 -- Current}
+\begin{itemize}
+	\item Optimized page loading time by up to 750\%
+	\item Rewrite of core features in a modern and resilient microservice architecture
+	\item Automating visual non-regression tests to reduce QA workload by 20\%
+	\item Encryption of confidential data with no impact on service availability
+\end{itemize}
+
+\subsection{N'Ware Technologies \hfill Saint-Georges, Qc}
+\subsubsection{Intern Developer \hfill Été 2020}
+\begin{itemize}
+	\item Rewrite and modernization of a warehouse management system
+\end{itemize}
+
+\subsection{Staples \hfill Saint-Georges, Qc}
+\subsubsection{Computer Technician \hfill 2019-2021}
+\begin{itemize}
+	\item Diagnosing and fixing various computer problems
+\end{itemize}
+\subsubsection{Sales Associate \hfill 2017-2019}
+\begin{itemize}
+	\item Assisting customers with computer, phones, and various
+        electronic purchases
+\end{itemize}
+
+
+\section{Education}
+%=================%
+\subsection{CÉGEP Beauce-Appalaches \hfill Saint-Georges, Qc}
+\subsubsection{Computer Science \hfill 2018--2021}
+\begin{itemize}
+	\item R score: 32.8
+	\item Data structures and algorithms
+	\item Operating systems
+	\item Object-oriented programming
+	\item Databases
+	\item Networking
+\end{itemize}
+
+
+\section{Skills and interests}
+%===========================%
+\begin{description}[itemsep=0pt]
+	\item[Programming] TypeScript. Java, C\#, Rust, C++, C
+	\item[Software] GNU+Linux, Neovim, Git
+	\item[Languages] French and English. Oral and written proficiency.
+	\item[Interests] Video Games, Japanese culture, privacy and security
+\end{description}
+
+\pagebreak{}
+
+\section{Projects}
+%===========================%
+\begin{itemize}
+	\item diffusion: Graphics rendering engine in c99 without third-party libraries.
+	\item hudkit-wayland: Wayland overlay to create HUDs with web technologies.
+	\item ffxiv-status-contrast \& ffxiv-easy-translate~: Plugins for the
+        Final Fantasy XIV game.
+	\item uwu-tray: Taskbar icon to UwU-ify text.
+	\item dell-fan-control-nvidia: Control servers fan speed based on GPU temperature.
+	\item yuri: Reaction images Discord bot.
+	\item Homelab / Software self-hosting.
+	\item Personal web page.
+\end{itemize}
+
+
+\section{Open Source Contributions}
+%===========================%
+\begin{itemize}
+	\item jellyfin-androidtv: Android TV client for the media server
+        software jellyfin.
+	\item bevy: ECS game engine written in Rust.
+	\item TinyNvidiaUpdateChecker: Manage Nvidia driver updates on windows.
+	\item ktor-env-config: Configuring the ktor framework with environment variables.
+\end{itemize}
+
+\end{document}
