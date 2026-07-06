@@ -7,6 +7,7 @@
 \documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
 
 \usepackage[margin=1in, letterpaper]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 \setcounter{secnumdepth}{0} % remove section numbering
 \usepackage{titlesec}
 % remove vertical spacing above and below
@@ -31,7 +32,7 @@
 		\raggedleft
 		Email: recruiting@cathgilbert.com \\
 		Mobile: +1 (418) 313-1402 \\
-		Website: https://olaren.dev \\
+        Website: \url{https://olaren.dev/en/} \\
 	\end{minipage}
 \end{center}
 
@@ -41,74 +42,51 @@
 \subsection{Desjardins \hfill Lévis/Montréal, Qc}
 \subsubsection{Analyst-Developer \hfill 2021 -- Current}
 \begin{itemize}
-	\item Development of the School Caisse and the AccèsD web platforms.
-	\item Optimized page loading time by 7.5x.
-	\item Modernization and rewrite of core banking features.
-	\item Encryption of confidential data with no impact on service availability
-	\item Automating visual non-regression tests to reduce QA workload by 20\%
+	\item Cut page load times by 7.5x by parallelizing essential data fetches and adding skeleton loading for non-critical content.
+	\item Led technical design and architecture decisions across multiple projects on the AccèsD platform.
+	\item Migrated core banking features from a legacy WebLogic monolith to Spring Boot microservices.
+	\item Built full-stack features across a Spring Boot backend-for-frontend and Angular frontend.
+	\item Encrypted confidential data across the platform with zero impact on service availability.
+	\item Built visual regression tests that cut QA workload by 20\%.
 \end{itemize}
 
 \subsection{N'Ware Technologies \hfill Saint-Georges, Qc}
 \subsubsection{Intern Developer \hfill Summer 2020}
 \begin{itemize}
-	\item Rewrite and modernization of a warehouse management system
-\end{itemize}
-
-\subsection{Staples \hfill Saint-Georges, Qc}
-\subsubsection{Computer Technician \hfill 2019-2021}
-\begin{itemize}
-	\item Diagnosing and fixing various computer problems
-\end{itemize}
-\subsubsection{Sales Associate \hfill 2017-2019}
-\begin{itemize}
-	\item Assisting customers with computer, phones, and various
-        electronic purchases
-\end{itemize}
-
-
-\section{Education}
-%=================%
-\subsection{CÉGEP Beauce-Appalaches \hfill Saint-Georges, Qc}
-\subsubsection{Computer Science \hfill 2018-2021}
-\begin{itemize}
-	\item R score: 32.8
-	\item Data structures and algorithms
-	\item Operating systems
-	\item Object-oriented programming
-	\item Databases
-	\item Networking
+	\item Rewrite and modernization of a warehouse management system.
 \end{itemize}
 
 
 \section{Skills and interests}
 %===========================%
 \begin{description}[itemsep=0pt]
-	\item[Programming] TypeScript. Java, C\#, Rust, C++, C
+	\item[Programming] TypeScript, Java, C\#, Rust, C++, C
 	\item[Software] GNU+Linux, Neovim, Git
 	\item[Languages] French and English. Oral and written proficiency.
-	\item[Interests] Video games, Open source software, privacy and security
+	\item[Interests] Open source software, privacy and security
 \end{description}
 
-\pagebreak{}
 
 \section{Projects}
 %===========================%
 \begin{itemize}
-	\item diffusion: Graphics rendering engine in c99 without third-party
+	\item Homelab: Self-hosted infrastructure for personal and family use.
+        \begin{itemize}
+            \item Runs multiple services (Syncthing, Immich, Radicale, Forgejo, Jellyfin, Navidrome, ...)
+            \item Backups following a 3-2-1 strategy: local ZFS snapshots, on-site and remote replication. Periodically tested restores.
+            \item Security with SSO for every service (kanidm), custom CA for TLS certificates (step-ca), VLAN segmentation and Wireguard.
+            \item Full monitoring stack with Prometheus, Loki, Alertmanager and Grafana.
+        \end{itemize}
+	\item diffusion: Graphics rendering engine in C99 without third-party
         libraries.
-	\item maptoposter~: Script to generate city map posters highlighting
+	\item maptoposter: Script to generate city map posters highlighting
 		public transit networks.
-	\item ffxiv-status-contrast \& ffxiv-easy-translate~: Plugins for the
+	\item ffxiv-status-contrast \& ffxiv-easy-translate: Plugins for the
 		Final Fantasy XIV game.
-	\item Homelab / Software self-hosting focused on cybersecurity.
 	\item hudkit-wayland: Wayland overlay to create HUDs with web technologies.
-	\item uwu-tray: Taskbar icon to UwU-ify text.
-	\item dell-fan-control-nvidia: Control servers fan speed based on GPU
-        temperature.
-	\item yuri: Reaction images Discord bot.
-	\item Personal web page.
 \end{itemize}
 
+\pagebreak{}
 
 \section{Open Source Contributions}
 %===========================%
@@ -116,10 +94,17 @@
 	\item jellyfin-androidtv: Android TV client for the media server
         software jellyfin.
 	\item PDSls: AT protocol data explorer.
+    \item Lumina: Framework for interacting with FFXIV game data
 	\item bevy: ECS game engine written in Rust.
-	\item TinyNvidiaUpdateChecker: Manage Nvidia driver updates on windows.
-	\item ktor-env-config: Configuring the ktor framework with environment
-        variables.
+\end{itemize}
+
+
+\section{Education}
+%=================%
+\subsection{CÉGEP Beauce-Appalaches \hfill Saint-Georges, Qc}
+\subsubsection{Computer Science \hfill 2018 -- 2021}
+\begin{itemize}
+	\item R score: 32.8
 \end{itemize}
 
 \end{document}

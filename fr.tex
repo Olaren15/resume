@@ -7,6 +7,7 @@
 \documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
 
 \usepackage[margin=1in, letterpaper]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 \setcounter{secnumdepth}{0} % remove section numbering
 \usepackage{titlesec}
 % remove vertical spacing above and below
@@ -31,7 +32,7 @@
 		\raggedleft
 		Email~: recrutement@cathgilbert.com \\
 		Cellulaire~: +1 (418) 313-1402 \\
-		Site Web~: https://olaren.dev \\
+		Site Web~: \url{https://olaren.dev} \\
 	\end{minipage}
 \end{center}
 
@@ -41,44 +42,25 @@
 \subsection{Desjardins \hfill Lévis/Montréal, Qc}
 \subsubsection{Analyste-développeuse \hfill 2021~---~Présent}
 \begin{itemize}
-    \item Développement des plateformes web de la Caisse Scolaire et AccèsD.
-	\item Amélioration du temps de chargement de page par un facteur de 7.5.
-	\item Modernisations et réécriture de fonctionnalités cœur d'AccèsD.
-	\item Chiffrement de données confidentielles sans impact sur la
-        disponibilité des services aux clients.
-	\item Automatisation de tests de non-régression visuelle pour réduire de
-        20~\% la charge de travail d'assurance qualité.
+    \item Réduction du temps de chargement de page par 7.5x en parallélisant
+        les requêtes de données essentielles et en ajoutant du squelette de
+        chargement pour le contenu non critique.
+    \item Direction des décisions de conception et d'architecture techniques
+        à travers plusieurs projets sur la plateforme AccèsD.
+    \item Migration de fonctionnalités bancaires cœur d'un monolithe WebLogic
+        legacy vers des microservices Spring Boot.
+    \item Développement full-stack sur un backend-for-frontend Spring Boot
+        et un frontend Angular.
+    \item Chiffrement de données confidentielles à travers la plateforme sans
+        impact sur la disponibilité des services.
+    \item Mise en place de tests de régression visuelle réduisant la charge
+        d'assurance qualité de 20~\%.
 \end{itemize}
 
 \subsection{N'Ware Technologies \hfill Saint-Georges, Qc}
 \subsubsection{Développeuse stagiaire \hfill Été 2020}
 \begin{itemize}
 	\item Réécriture et modernisation d'une application de gestion d'entrepôt.
-\end{itemize}
-
-\subsection{Bureau en gros \hfill Saint-Georges, Qc}
-\subsubsection{Technicienne informatique \hfill 2019-2021}
-\begin{itemize}
-	\item Diagnostic et résolution de problèmes informatiques divers
-\end{itemize}
-\subsubsection{Conseillère à la vente \hfill 2017-2019}
-\begin{itemize}
-	\item Assistance et conseil de clients pour l'achat d'ordinateurs, de
-        cellulaires et autres appareils électroniques.
-\end{itemize}
-
-
-\section{Éducation}
-%=================%
-\subsection{CÉGEP Beauce-Appalaches \hfill Saint-Georges, Qc}
-\subsubsection{Technique de l'informatique \hfill 2018--2021}
-\begin{itemize}
-	\item Cote R~: 32.8
-	\item Algorithmes et structures de données
-	\item Systèmes d'exploitation
-	\item Programmation-objet
-	\item Bases de données
-	\item Réseaux
 \end{itemize}
 
 
@@ -88,28 +70,35 @@
 	\item[Programmation] TypeScript\,; Java\,; C\#\,; Rust\,; C++\,; C\,;
 	\item[Logiciels] GNU+Linux\,; Neovim\,; Git\,;
 	\item[Langues] Français et anglais. Fluente à l'oral et à l'écrit.
-	\item[Intérêts] Jeux vidéos\,; logiciels libres\,; sécurité et vie privée\,;
+	\item[Intérêts] logiciels libres\,; sécurité et vie privée\,;
 \end{description}
 
 
 \section{Projets}
 %===========================%
 \begin{itemize}
-	\item diffusion~: Engin de rendu graphique en c99 sans librairie tierce.
+	\item Homelab~: Infrastructure auto-hébergée à usage personnel et familial
+		\begin{itemize}
+			\item Héberge plusieurs services (Syncthing, Immich,
+			Radicale, Forgejo, Jellyfin, Navidrome, ...)
+			\item Sauvegardes 3-2-1~: snapshots ZFS locales,
+			réplication on-site et à distance. Tests de restauration périodiques.
+			\item Sécurité avec SSO sur chaque service (kanidm),
+			CA personnalisé pour certificats TLS (step-ca),
+			segmentation VLAN et Wireguard.
+			\item Stack de surveillance complet avec Prometheus,
+			Loki, Alertmanager et Grafana.
+		\end{itemize}
+	\item diffusion~: Engin de rendu graphique en C99 sans librairie tierce.
 	\item maptoposter~: Génération d'affiches de carte de villes qui mettent
         en évidence les réseaux de transports en commun.
 	\item ffxiv-status-contrast \& ffxiv-easy-translate~: Plugins pour le jeu
         vidéo Final Fantasy XIV.
-	\item Homelab / Autohébergement de logiciels avec un focus sur la
-        cybersécurité.
 	\item hudkit-wayland~: Overlay pour créer des HUD wayland avec les
         technologies du web.
-	\item Page web personnelle.
-	\item uwu-tray~: Icône dans la barre de tâches pour UwU-ifier du texte.
-	\item dell-fan-control-nvidia~: Contrôler la vitesse des ventilateurs selon
-        la température du GPU.
-	\item yuri~: Bot discord pour envoyer des images de réaction.
 \end{itemize}
+
+\pagebreak{}
 
 
 \section{Contributions Open Source}
@@ -117,12 +106,18 @@
 \begin{itemize}
 	\item jellyfin-androidtv~: Client Android TV pour le logiciel de serveur
         multimédia Jellyfin.
-	\item PDSls~: Explorateur de données sur le AT protocol.
+	\item PDSls~: Explorateur de données sur le protocole AT.
+	\item Lumina~: Framework pour interagir avec les données du jeu FFXIV.
 	\item bevy~: Engin de jeu ECS écrit en Rust.
-	\item TinyNvidiaUpdateChecker~: Gestion de mises à jour des pilotes Nvidia
-        sur Windows.
-	\item ktor-env-config~: Configuration du framework ktor par variables
-        d'environnement.
+\end{itemize}
+
+
+\section{Éducation}
+%=================%
+\subsection{CÉGEP Beauce-Appalaches \hfill Saint-Georges, Qc}
+\subsubsection{Technique de l'informatique \hfill 2018~---~2021}
+\begin{itemize}
+	\item Cote R~: 32.8
 \end{itemize}
 
 \end{document}
