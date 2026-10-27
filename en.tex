@@ -4,15 +4,16 @@
 % License : MIT
 %------------------------
 
-\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
+\documentclass[10pt]{article} % fontsize 10pt/11pt/12pt
 
-\usepackage[margin=1in, letterpaper]{geometry}
+\usepackage[margin=0.9in, letterpaper]{geometry}
 \usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 \setcounter{secnumdepth}{0} % remove section numbering
 \usepackage{titlesec}
 % remove vertical spacing above and below
 \titlespacing{\subsection}{0pt}{*0}{*0}
 \titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titlespacing*{\section}{0pt}{7pt}{3pt}
 \titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
 \titleformat*{\subsubsection}{\large\itshape}
 \usepackage{enumitem}
@@ -23,18 +24,28 @@
 
 \begin{document}
 \begin{center}
-	\begin{minipage}{0.5\textwidth}
-		{\Huge\bfseries
-			Catherine Gilbert
-		} \\ \medskip
+	\begin{minipage}[c]{0.56\textwidth}
+		\raggedright
+		{\Huge\bfseries Catherine Gilbert} \\[2pt]
+		Full-Stack Developer
 	\end{minipage} \hfill
-	\begin{minipage}{0.4\textwidth}
+	\begin{minipage}[c]{0.42\textwidth}
 		\raggedleft
-		Email: recruiting@cathgilbert.com \\
+		\small
+		Email: contact@cathgilbert.com \\
 		Mobile: +1 (418) 313-1402 \\
-        Website: \url{https://olaren.dev/en/} \\
+		GitHub: \href{https://github.com/Olaren15}{github.com/Olaren15} \\
+		Website: \href{https://olaren.dev/en/}{olaren.dev}
 	\end{minipage}
 \end{center}
+
+
+\section{Summary}
+%==========%
+Full-stack developer with 5 years of experience building large-scale banking
+applications. Strong in Angular, Spring Boot and TypeScript, with hands-on
+experience leading backend development, encrypting sensitive data and
+delivering measurable performance gains.
 
 
 \section{Experience}
@@ -42,33 +53,41 @@
 \subsection{Desjardins \hfill Montréal, Qc}
 \subsubsection{Analyst-Developer \hfill 2021 -- July 2026}
 \begin{itemize}
-	\item Cut page load times by 7.5x by parallelizing essential data fetches
-        and adding skeleton loading for non-critical content.
-	\item Led technical design and architecture decisions across multiple
-        projects on the AccèsD platform.
-	\item Migrated core banking features from a legacy WebLogic monolith to
-        Spring Boot microservices and Angular SPA.
-	\item Built highly interactive full web app with an Angular frontend and
-        Spring Boot backend.
-	\item Built visual regression tests with Cypress that cut QA workload by 20\%.
-	\item Encrypted confidential data across the platform with zero impact on
-        service availability.
+	\item Led backend development for Caisse scolaire, a school savings product
+        for children aged 5--12, as backend technical lead on a 3-developer
+        team working across Angular, Spring Boot and Azure.
+	\item Took Caisse scolaire from POC to production in 6 months, cutting
+        initial load time from 15s to 2s, and consistently shipped iterations
+        on time and within budget.
+	\item Migrated account-to-account transfer logic from a legacy WebLogic
+        monolith to Spring Boot microservices during the Caisse scolaire
+        rollout.
+	\item Encrypted sensitive customer data in Oracle using AES-256-GCM
+        and transparent decryption for the application.
+	\item Built a fully online account-opening flow for prospective clients,
+        removing the need to visit a branch, with Angular and Spring Boot.
+	\item Built Cypress visual regression tests across many themes, cutting QA
+        workload by 20\%.
 \end{itemize}
 
 \subsection{N'Ware Technologies \hfill Saint-Georges, Qc}
 \subsubsection{Intern Developer \hfill Summer 2020}
 \begin{itemize}
-	\item Rewrite and modernization of a warehouse management system in .NET Core.
+	\item Rewrote and modernized a warehouse management system in C\#/.NET Core.
 \end{itemize}
 
 
-\section{Skills and interests}
-%===========================%
+\section{Skills}
+%==============%
 \begin{description}[itemsep=0pt]
 	\item[Programming] TypeScript, Java, C\#, Rust, C++, C
-	\item[Software] GNU+Linux, Neovim, Git
+	\item[Frontend] Angular
+	\item[Backend] Spring Boot, REST APIs, microservices, Oracle, Azure
+	\item[Security] AES-256-GCM encryption, JWT authentication
+	\item[Testing] JUnit, Jasmine/Jest, Cypress (E2E, visual regression),
+        automated API regression scripts
+	\item[Tools] Git, GNU+Linux
 	\item[Languages] French and English. Oral and written proficiency.
-	\item[Interests] Open source software, privacy and security
 \end{description}
 
 
@@ -77,30 +96,17 @@
 \begin{itemize}
 	\item Homelab: Self-hosted infrastructure for personal and family use.
         \begin{itemize}
-            \item Runs multiple services (Syncthing, Immich, Radicale, Forgejo, Jellyfin, Navidrome, ...)
-            \item Backups following a 3-2-1 strategy: local ZFS snapshots, on-site and remote replication. Periodically tested restores.
-            \item Security with SSO for every service (kanidm), custom CA for TLS certificates (step-ca), VLAN segmentation and Wireguard.
-            \item Full monitoring stack with Prometheus, Loki, Alertmanager and Grafana.
+            \item Runs services such as Immich, Forgejo, Jellyfin and Syncthing
+            with SSO (Kanidm) and a custom CA for TLS certificates.
+            \item 3-2-1 backups using local ZFS snapshots and remote
+            replication, plus full monitoring with Prometheus, Loki and Grafana.
         \end{itemize}
 	\item diffusion: Graphics rendering engine in C99 without third-party
         libraries.
 	\item maptoposter: Script to generate city map posters highlighting
 		public transit networks.
-	\item ffxiv-status-contrast \& ffxiv-easy-translate: Plugins for the
-		Final Fantasy XIV game.
-	\item hudkit-wayland: Wayland overlay to create HUDs with web technologies.
-\end{itemize}
-
-\pagebreak{}
-
-\section{Open Source Contributions}
-%===========================%
-\begin{itemize}
-	\item jellyfin-androidtv: Android TV client for the media server
-        software jellyfin.
-	\item PDSls: AT protocol data explorer.
-    \item Lumina: Framework for interacting with FFXIV game data
-	\item bevy: ECS game engine written in Rust.
+	\item Open source contributions to bevy (Rust ECS engine), Lumina (FFXIV
+        game data framework), jellyfin-androidtv and PDSls.
 \end{itemize}
 
 

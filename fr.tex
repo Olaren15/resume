@@ -4,15 +4,16 @@
 % License : MIT
 %------------------------
 
-\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
+\documentclass[10pt]{article} % fontsize 10pt/11pt/12pt
 
-\usepackage[margin=1in, letterpaper]{geometry}
+\usepackage[margin=0.9in, letterpaper]{geometry}
 \usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 \setcounter{secnumdepth}{0} % remove section numbering
 \usepackage{titlesec}
 % remove vertical spacing above and below
 \titlespacing{\subsection}{0pt}{*0}{*0}
 \titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titlespacing*{\section}{0pt}{7pt}{3pt}
 \titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
 \titleformat*{\subsubsection}{\large\itshape}
 \usepackage{enumitem}
@@ -23,18 +24,28 @@
 
 \begin{document}
 \begin{center}
-	\begin{minipage}{0.5\textwidth}
-		{\Huge\bfseries
-			Catherine Gilbert
-		} \\ \medskip
+	\begin{minipage}[c]{0.56\textwidth}
+		\raggedright
+		{\Huge\bfseries Catherine Gilbert} \\[2pt]
+		Développeuse full-stack
 	\end{minipage} \hfill
-	\begin{minipage}{0.4\textwidth}
+	\begin{minipage}[c]{0.42\textwidth}
 		\raggedleft
-		Email~: recrutement@cathgilbert.com \\
+		\small
+		Courriel~: contact@cathgilbert.com \\
 		Cellulaire~: +1 (418) 313-1402 \\
-		Site Web~: \url{https://olaren.dev} \\
+		GitHub~: \href{https://github.com/Olaren15}{github.com/Olaren15} \\
+		Site Web~: \href{https://olaren.dev}{olaren.dev}
 	\end{minipage}
 \end{center}
+
+
+\section{Sommaire}
+%==========%
+Développeuse full-stack avec 5 ans d'expérience en applications bancaires à
+grande échelle. Solide en Angular, Spring Boot et TypeScript, avec de
+l'expérience en leadership backend, chiffrement de données sensibles et
+optimisation des performances.
 
 
 \section{Expérience}
@@ -42,74 +53,58 @@
 \subsection{Desjardins \hfill Montréal, Qc}
 \subsubsection{Analyste-développeuse \hfill 2021~---~Juillet 2026}
 \begin{itemize}
-    \item Réduction du temps de chargement de page par 7.5x en parallélisant
-        les requêtes de données essentielles et en ajoutant un squelette de
-        chargement pour le contenu non critique.
-    \item Direction des décisions de conception et d'architecture techniques
-        à travers plusieurs projets sur la plateforme AccèsD.
-    \item Migration de fonctionnalités bancaires cœur d'un monolithe WebLogic
-        legacy vers des microservices Spring Boot et SPA Angular.
-    \item Développement d'application web hautement interactive avec frontend
-        Angular et backend Spring Boot
-    \item Mise en place de tests de régression visuelle Cypress réduisant la
-        charge d'assurance qualité de 20~\%.
-    \item Chiffrement de données confidentielles à travers la plateforme sans
-        impact sur la disponibilité des services.
+    \item Responsable technique du backend de la Caisse scolaire, produit
+        d'épargne pour enfants de 5 à 12 ans, au sein d'une équipe de 4
+        développeurs (Angular, Spring Boot, Azure).
+    \item Passage de la Caisse scolaire du POC à la production en 6 mois, avec
+        un chargement initial réduit de 15~s à 2~s et des itérations livrées de
+        façon constante dans les délais et le budget.
+    \item Migration de la logique de transfert entre comptes d'un monolithe
+        WebLogic legacy vers des microservices Spring Boot dans le cadre du
+        déploiement de la Caisse scolaire.
+    \item Chiffrement de données clients dans Oracle avec AES-256-GCM avec
+        déchiffrement transparent pour l'application.
+    \item Développement d'un parcours d'ouverture de compte 100~\% en ligne,
+        éliminant le déplacement en succursale, avec Angular et Spring Boot.
+    \item Tests de régression visuelle Cypress sur de nombreux thèmes,
+        réduisant la charge d'assurance qualité de 20~\%.
 \end{itemize}
 
 \subsection{N'Ware Technologies \hfill Saint-Georges, Qc}
 \subsubsection{Développeuse stagiaire \hfill Été 2020}
 \begin{itemize}
 	\item Réécriture et modernisation d'une application de gestion d'entrepôt
-        en .NET Core.
+        en C\#/.NET Core.
 \end{itemize}
 
 
-\section{Compétences et intérêts}
+\section{Compétences}
 %===========================%
 \begin{description}[itemsep=0pt]
-	\item[Programmation] TypeScript\,; Java\,; C\#\,; Rust\,; C++\,; C\,;
-	\item[Logiciels] GNU+Linux\,; Neovim\,; Git\,;
+	\item[Programmation] TypeScript, Java, C\#, Rust, C++, C
+	\item[Frontend] Angular
+	\item[Backend] Spring Boot, API REST, microservices, Oracle, Azure
+	\item[Sécurité] Chiffrement AES-256-GCM, authentification JWT
+	\item[Tests] JUnit, Jasmine/Jest, Cypress (E2E, régression visuelle),
+        scripts de régression API automatisés
+	\item[Outils] Git, GNU+Linux
 	\item[Langues] Français et anglais. Fluente à l'oral et à l'écrit.
-	\item[Intérêts] logiciels libres\,; sécurité et vie privée\,;
 \end{description}
 
 
 \section{Projets}
 %===========================%
 \begin{itemize}
-	\item Homelab~: Infrastructure auto-hébergée à usage personnel et familial
+	\item Homelab~: Infrastructure auto-hébergée à usage personnel et familial.
 		\begin{itemize}
-			\item Héberge plusieurs services (Syncthing, Immich,
-			Radicale, Forgejo, Jellyfin, Navidrome, ...)
-			\item Sauvegardes 3-2-1~: snapshots ZFS locales,
-			réplication on-site et à distance. Tests de restauration périodiques.
-			\item Sécurité avec SSO sur chaque service (kanidm),
-			CA personnalisé pour certificats TLS (step-ca),
-			segmentation VLAN et Wireguard.
-			\item Stack de surveillance complet avec Prometheus,
-			Loki, Alertmanager et Grafana.
+			\item Héberge Immich, Forgejo, Jellyfin et Syncthing avec SSO
+			(Kanidm) et AC personnalisée pour TLS.
+			\item Sauvegardes 3-2-1 (snapshots ZFS et réplication distante) et
+			surveillance Prometheus/Loki/Grafana.
 		\end{itemize}
-	\item diffusion~: Engin de rendu graphique en C99 sans librairie tierce.
-	\item maptoposter~: Génération d'affiches de carte de villes qui mettent
-        en évidence les réseaux de transports en commun.
-	\item ffxiv-status-contrast \& ffxiv-easy-translate~: Plugins pour le jeu
-        vidéo Final Fantasy XIV.
-	\item hudkit-wayland~: Overlay pour créer des HUD wayland avec les
-        technologies du web.
-\end{itemize}
-
-\pagebreak{}
-
-
-\section{Contributions Open Source}
-%===========================%
-\begin{itemize}
-	\item jellyfin-androidtv~: Client Android TV pour le logiciel de serveur
-        multimédia Jellyfin.
-	\item PDSls~: Explorateur de données sur le protocole AT.
-	\item Lumina~: Framework pour interagir avec les données du jeu FFXIV.
-	\item bevy~: Engin de jeu ECS écrit en Rust.
+	\item diffusion~: Moteur de rendu graphique en C99 sans librairie tierce.
+	\item maptoposter~: Génération d'affiches de réseaux de transport en commun.
+	\item Contributions open source~: bevy, Lumina, jellyfin-androidtv et PDSls.
 \end{itemize}
 
 
