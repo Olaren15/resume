@@ -5,7 +5,8 @@ Mon CV
 ## Compilation
 
 ```sh
-pdflatex resume.tex
+just en   # Catherine-Gilbert-Resume-EN.pdf
+just fr   # Catherine-Gilbert-Resume-FR.pdf
 ```
 
 ## License
